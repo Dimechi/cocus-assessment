@@ -29,10 +29,12 @@ test.describe('Authentication Tests', () => {
 
     });
 
-    test('Verify user can log in and log out successfully', async ({ page }) => {
+    test('Verify user can log in with valid credentials', async ({ page }) => {
         const authPage = new AuthenticationPage(page);
         await authPage.navigateTo();
         await authPage.acceptCookies();
         await authPage.login(config.credentials.validEmail, config.credentials.validPassword);
     });
+
+    //There are no test for Logout as it requires OTP confirmation. This scenerio is achievable on Test environment using MailTraps for dev environment
 });

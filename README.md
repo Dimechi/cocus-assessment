@@ -1,6 +1,6 @@
 Introduction
 This README provides detailed instructions for setting up and using the Playwright test framework for automated end-to-end testing of web applications. 
-This framework supports multiple browsers, logging using wincosin, and adopts page object model.
+This framework supports multiple browsers, logging using winston, and adopts page object model.
 
 Installation
 Prerequisites 

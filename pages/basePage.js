@@ -21,7 +21,7 @@ class BasePage {
     }
 
     async navigateTo() {
-        await this.page.goto(config.baseUrl);
+        await this.page.goto(config.baseUrl,{ timeout: 60000 });
     }
 }
 module.exports = BasePage;

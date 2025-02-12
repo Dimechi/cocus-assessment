@@ -3,11 +3,17 @@ const ProductPage = require('../pages/productPage');
 const logger = require('../config/logger');
 
 test.describe('Product Page Tests', () => {
-    test('Verify user can sort product items by pages', async ({ page }) => {
-        const productPage = new ProductPage(page);
+    let productPage;
+
+    test.beforeEach(async ({ page }) => {
+        productPage = new ProductPage(page);
         await productPage.navigateTo();
         await productPage.acceptCookies();
         await productPage.navigateToNewIn();
+        await page.waitForTimeout(2000);  // Consider replacing fixed waits with smarter waits (e.g., waitForSelector, waitForResponse).
+    });
+
+    test('Verify user can sort product items by pages', async ({ page }) => {
         await productPage.sortByItemOnPageNumber('48');
         const productCount = await page.$$eval('.js-product-item', products => products.length);
         expect(productCount).toBe(48);
@@ -15,11 +21,6 @@ test.describe('Product Page Tests', () => {
     });
 
     test('Verify that user can sort product items by highest price',async({page})=>{
-        const productPage = new ProductPage(page);
-        await productPage.navigateTo();
-        await productPage.acceptCookies();
-        await productPage.navigateToNewIn();
-        await page.waitForTimeout(2000);
         await page.getByLabel('Sort By:').selectOption('Highest Price');
         await page.waitForTimeout(2000);
         const prices = await page.$$eval('.product-price__now', elements => elements.map(el => parseFloat(el.textContent.replace(/[^0-9.]/g, ''))));
@@ -30,11 +31,6 @@ test.describe('Product Page Tests', () => {
     })
 
     test('Verify that user can sort product items by lowest price',async({page})=>{
-        const productPage = new ProductPage(page);
-        await productPage.navigateTo();
-        await productPage.acceptCookies();
-        await productPage.navigateToNewIn();
-        await page.waitForTimeout(2000);
         await page.getByLabel('Sort By:').selectOption('Lowest Price');
         await page.waitForTimeout(2000);
         const prices = await page.$$eval('.product-price__now', elements => elements.map(el => parseFloat(el.textContent.replace(/[^0-9.]/g, ''))));
@@ -45,26 +41,20 @@ test.describe('Product Page Tests', () => {
     })
 
     test('Verify that user can add item to cart',async({page})=>{
-        const productPage = new ProductPage(page);
-        await productPage.navigateTo();
-        await productPage.acceptCookies();
-        await productPage.navigateToNewIn();
-        await page.waitForTimeout(2000);
         await page.waitForSelector('.product__items.js-product-list-items');
         await page.click('.product__item .product__link');
         await page.getByLabel('Select Size').selectOption('12');
         await page.waitForTimeout(5000);
         await page.getByText('Add To Bag').first().click();
+        await page.click('a[name="addToBag-main"]');
+        const itemCount = await page.textContent('.bagTotal .totalBasketItems');
+        // Assert that the total number of items is 1
+        expect(itemCount).toBe('1', 'The total number of items in the basket should be 1');
         logger.info('Test completed: Item successfully added to cart');
         
     })
     
     test('Verify that user can save item',async({page})=>{
-        const productPage = new ProductPage(page);
-        await productPage.navigateTo();
-        await productPage.acceptCookies();
-        await productPage.navigateToNewIn();
-        await page.waitForTimeout(2000);
         await page.locator('.product__save-for-later').first().click();
         await page.locator('.gui-dropdown-toggle').click();
         await page.getByRole('link', { name: 'Saved Items' }).click();
