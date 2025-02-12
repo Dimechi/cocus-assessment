@@ -1,0 +1,35 @@
+{"level":"info","message":"Test started: successful login","service":"user-service","timestamp":"2025-02-12 02:50:08"}
+{"level":"info","message":"Test completed","service":"user-service","timestamp":"2025-02-12 02:50:27"}
+{"level":"info","message":"Test started: successful login","service":"user-service","timestamp":"2025-02-12 02:57:31"}
+{"level":"info","message":"Test started: successful login","service":"user-service","timestamp":"2025-02-12 02:58:41"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 02:58:45"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 02:58:45"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 02:58:45"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 02:58:45"}
+{"level":"info","message":"Test completed","service":"user-service","timestamp":"2025-02-12 02:59:01"}
+{"level":"info","message":"Test completed: Page Sorted Correctly","service":"user-service","timestamp":"2025-02-12 02:59:01"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 02:59:04"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 02:59:04"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 02:59:04"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 02:59:10"}
+{"level":"info","message":"Test completed: Item saved to favorite successfully","service":"user-service","timestamp":"2025-02-12 02:59:27"}
+{"level":"info","message":"Test completed: Item successfully added to cart","service":"user-service","timestamp":"2025-02-12 02:59:28"}
+{"level":"info","message":"Test started: successful login","service":"user-service","timestamp":"2025-02-12 03:04:34"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 03:04:38"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 03:04:38"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 03:04:38"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 03:04:38"}
+{"level":"info","message":"Atempting Logging in","service":"user-service","timestamp":"2025-02-12 03:04:47"}
+{"level":"info","message":"Atempting Logging in","service":"user-service","timestamp":"2025-02-12 03:04:47"}
+{"level":"info","message":"Atempting Logging in","service":"user-service","timestamp":"2025-02-12 03:04:47"}
+{"level":"info","message":"Logging in...","service":"user-service","timestamp":"2025-02-12 03:04:53"}
+{"level":"info","message":"Test completed","service":"user-service","timestamp":"2025-02-12 03:04:53"}
+{"level":"info","message":"Test completed: Page Sorted Correctly","service":"user-service","timestamp":"2025-02-12 03:04:53"}
+{"level":"info","message":"Logging in...","service":"user-service","timestamp":"2025-02-12 03:04:53"}
+{"level":"info","message":"Logging in...","service":"user-service","timestamp":"2025-02-12 03:04:53"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 03:04:56"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 03:04:57"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 03:04:57"}
+{"level":"info","message":"Popup detected, attempting to close","service":"user-service","timestamp":"2025-02-12 03:04:57"}
+{"level":"info","message":"Test completed: Item saved to favorite successfully","service":"user-service","timestamp":"2025-02-12 03:05:14"}
+{"level":"info","message":"Test completed: Item successfully added to cart","service":"user-service","timestamp":"2025-02-12 03:05:18"}
